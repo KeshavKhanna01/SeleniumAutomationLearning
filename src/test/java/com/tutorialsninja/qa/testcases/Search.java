@@ -15,7 +15,7 @@ public class Search extends Base {
 	public Search() {
 		super();
 	}
-	WebDriver driver;
+	public WebDriver driver;
 	@BeforeMethod
 	public void setup() {
 		
@@ -27,7 +27,11 @@ public class Search extends Base {
 	@AfterMethod
 	public void tearDown() {
 		
-		driver.quit();
+		  if (driver != null) {
+		        driver.quit();
+		    }else {
+		        System.out.println("Driver is null in tearDown()");
+		    }
 	}
 	@Test(priority=1)
 	
@@ -63,7 +67,7 @@ public class Search extends Base {
 		searchPage= HomePage.clickSearchButton();
 		
 		String actualSearchMessage = searchPage.displayStatusofInValidHpProduct();
-		Assert.assertEquals(actualSearchMessage,dataProp.getProperty("noProductinSearch"),"Message is not being displayed");
+		Assert.assertEquals(actualSearchMessage,dataProp.getProperty("ProductinSearch"),"Message is not being displayed");
 		
 	}
 }

@@ -15,7 +15,7 @@ public class Register extends Base{
 	public Register() {
 		super();
 	}
-WebDriver driver;
+public WebDriver driver;
 	RegisterPage registerPage;
 	AccountSuccessPage accountSuccessPage;
 	

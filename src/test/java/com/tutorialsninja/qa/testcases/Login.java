@@ -24,7 +24,7 @@ public class Login extends Base {
 		super();
 	}
 	
-	WebDriver driver;
+	public WebDriver driver;
 	
 	@BeforeMethod
 	public void setup() {

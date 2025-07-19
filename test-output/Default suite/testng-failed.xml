@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.tutorialsninja.qa.testcases.Register">
+      <class name="com.tutorialsninja.qa.testcases.Search">
         <methods>
+          <include name="vrifySearchWithInvalidProduct"/>
           <include name="setup"/>
-          <include name="VerifyRegisteringAnAccountWithExistingEmailAddress"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.tutorialsninja.qa.testcases.Register -->
+      </class> <!-- com.tutorialsninja.qa.testcases.Search -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
